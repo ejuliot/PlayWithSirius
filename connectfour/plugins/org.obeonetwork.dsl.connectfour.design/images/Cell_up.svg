@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="111.92953"
+   height="111.92953"
+   id="svg1324"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Cell_up.svg"
+   version="1.0"
+   inkscape:export-filename="C:\obeo\dev\od 8.1.1\runtime-workspace.connectfour.runtime\org.obeonetwork.dsl.connectfour.design\images\Cell_none.gif.png"
+   inkscape:export-xdpi="12.865238"
+   inkscape:export-ydpi="12.865238">
+  <defs
+     id="defs1326" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.0009657"
+     inkscape:cx="-17.893739"
+     inkscape:cy="64.338448"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g2932"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     showgrid="false"
+     inkscape:window-maximized="1"
+     units="mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata1329">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/GPL/2.0/" />
+        <dc:title>Puissance4_01</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>François Haffner</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/GPL/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/SourceCode" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.8265597,-0.19408402)">
+    <g
+       id="g2932"
+       transform="matrix(1.067148,0,0,1.058798,-9.922884,-459.8516)">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect2344"
+         d="m 12.11618,486.82067 0.08785,53.50997 104.68901,-0.18719 -0.0878,-53.32278 -8.28728,0 c -0.0618,23.39835 -18.633759,42.38298 -41.465663,42.38296 -0.357345,0 -0.699027,0.009 -1.054212,0 -0.08741,-0.002 -0.176277,0.003 -0.263553,0 -22.216797,-0.72008 -40.028441,-19.44127 -40.089328,-42.38296 z"
+         style="fill:#002ae0;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         sodipodi:nodetypes="cccccscccc" />
+      <path
+         style="fill:#ffffff;fill-opacity:0.37991267;fill-rule:evenodd;stroke:none"
+         d="M 6.125 56.3125 C 6.4054724 64.528511 8.6096547 72.795154 13 80.40625 C 13.426143 81.145016 13.887318 81.852841 14.34375 82.5625 C 10.0701 74.201817 8.2911612 65.146345 8.75 56.3125 L 6.125 56.3125 z "
+         transform="matrix(0.93707714,0,0,0.94446722,11.947212,434.49807)"
+         id="path2589" />
+      <path
+         style="fill:#000000;fill-opacity:0.31877729;fill-rule:evenodd;stroke:none"
+         d="M 108.1875 55.71875 C 107.04161 72.352787 97.936441 88.137422 82.4375 97.09375 C 58.44913 110.95583 27.974126 103.39277 13.09375 80.375 C 13.479567 81.125455 13.855107 81.854995 14.28125 82.59375 C 28.577702 107.37811 60.269055 115.87175 85.03125 101.5625 C 101.91984 91.803143 111.22129 73.956013 110.90625 55.71875 L 108.1875 55.71875 z "
+         transform="matrix(0.93707714,0,0,0.94446722,11.947212,434.49807)"
+         id="path2591" />
+    </g>
+  </g>
+</svg>

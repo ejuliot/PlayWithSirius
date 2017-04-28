@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="org.obeonetwork.dsl.connectfour.design.Activator"
+               id="org.obeonetwork.dsl.connectfour.design"
+	       name="connectfour">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="org.obeonetwork.dsl.connectfour.design.services.ConnectFourServices"
+           id="org.obeonetwork.dsl.connectfour.design.services.ConnectFourServices">
+     </javaActions>
+  </extension>
+</plugin>
