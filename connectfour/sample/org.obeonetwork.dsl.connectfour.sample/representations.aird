@@ -1907,16 +1907,6 @@
               <styles xmi:type="notation:ShapeStyle" xmi:id="_nY9_LnA6EeacUbKlyrIkNw" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nY9_L3A6EeacUbKlyrIkNw" x="245"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_nY-mNHA6EeacUbKlyrIkNw" type="3008" element="_nY7jj3A6EeacUbKlyrIkNw">
-              <children xmi:type="notation:Node" xmi:id="_nY-mN3A6EeacUbKlyrIkNw" type="5005"/>
-              <children xmi:type="notation:Node" xmi:id="_nY-mOHA6EeacUbKlyrIkNw" type="7002">
-                <styles xmi:type="notation:SortingStyle" xmi:id="_nY-mOXA6EeacUbKlyrIkNw"/>
-                <styles xmi:type="notation:FilteringStyle" xmi:id="_nY-mOnA6EeacUbKlyrIkNw"/>
-                <styles xmi:type="notation:DrawerStyle" xmi:id="_nY-mO3A6EeacUbKlyrIkNw"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_nY-mNXA6EeacUbKlyrIkNw" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nY-mNnA6EeacUbKlyrIkNw" x="286"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_nY8xAnA6EeacUbKlyrIkNw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_nY8xA3A6EeacUbKlyrIkNw"/>
           </children>
@@ -1926,11 +1916,12 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_nY8J8nA6EeacUbKlyrIkNw"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7i5HA6EeacUbKlyrIkNw" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7i5HA6EeacUbKlyrIkNw" name="YELLOW is the winner" childrenPresentation="HorizontalStack">
       <target xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.0"/>
       <semanticElements xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.0"/>
       <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7i5XA6EeacUbKlyrIkNw"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7i5nA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7i5nA6EeacUbKlyrIkNw" showIcon="false" foregroundColor="255,255,255">
+        <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']"/>
@@ -1938,7 +1929,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.0"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.0"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7i6HA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7i6XA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7i6XA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -1946,7 +1937,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.0"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.0"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7i63A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7i7HA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6ctc0CvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2010,7 +2001,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.1"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.1"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jAHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jAXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jAXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2018,7 +2009,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.1"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.1"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jA3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jBHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6c0KgCvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2053,9 +2044,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7jDnA6EeacUbKlyrIkNw" width="10" height="10">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.22"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.22"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_G9-osHElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jD3A6EeacUbKlyrIkNw"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_G94iEHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -2085,7 +2073,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.2"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.2"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jGHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jGXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jGXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2093,7 +2081,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.2"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.2"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jG3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jHHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6c5qECvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2128,9 +2116,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7jJnA6EeacUbKlyrIkNw" width="10" height="10">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.23"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.23"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_G9_PwHElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jJ3A6EeacUbKlyrIkNw"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_G95wMHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -2160,7 +2145,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.3"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.3"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jMHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jMXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jMXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2168,7 +2153,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.3"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.3"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jM3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jNHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6c-ikCvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2203,9 +2188,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7jPnA6EeacUbKlyrIkNw" width="10" height="10">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.24"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.24"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_G9_PwXElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jP3A6EeacUbKlyrIkNw"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_G96-UHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -2235,7 +2217,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.4"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.4"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jSHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jSXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jSXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2243,7 +2225,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.4"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.4"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jS3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jTHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6dDbECvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2278,9 +2260,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7jVnA6EeacUbKlyrIkNw" width="10" height="10">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.25"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.0/@cells.25"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_G9_PwnElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jV3A6EeacUbKlyrIkNw"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_G98McHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -2310,7 +2289,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.5"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.5"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jYHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jYXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jYXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2318,7 +2297,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.5"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.5"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jY3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jZHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6dITkCvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2382,7 +2361,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.6"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.6"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7jeHA6EeacUbKlyrIkNw"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jeXA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jeXA6EeacUbKlyrIkNw" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -2390,7 +2369,7 @@
           <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.6"/>
           <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.0/@columns.6"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_nY7je3A6EeacUbKlyrIkNw"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jfHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true" backgroundColor="136,136,136" foregroundColor="136,136,136">
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_6dPoUCvqEeeHLpZkB0CD3A" showIcon="false" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_up.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='Header']"/>
@@ -2449,15 +2428,6 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nY7jj3A6EeacUbKlyrIkNw" name="YELLOW is the winner">
-        <target xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.0"/>
-        <semanticElements xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.0"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nY7jkHA6EeacUbKlyrIkNw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
-          <labelFormat>bold</labelFormat>
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Winner']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Winner']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']"/>
@@ -3252,9 +3222,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NJM1GHElEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.30"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.30"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_VV5JcXElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_NJM1GXElEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_Q7jFEHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
@@ -3327,9 +3294,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NJM1MHElEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.31"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.31"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_VV5JcnElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_NJM1MXElEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_Tm8UUHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
@@ -3402,9 +3366,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NJM1SHElEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.32"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.32"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_VV5wgHElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_NJM1SXElEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_U1cu0HElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
@@ -3477,9 +3438,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_NJM1YHElEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.33"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.1/@cells.33"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_VV5wgXElEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_NJM1YXElEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_VV37UHElEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
@@ -4143,16 +4101,6 @@
               <styles xmi:type="notation:ShapeStyle" xmi:id="_PKblbXEoEeaJ-_1hA7UEAg" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PKblbnEoEeaJ-_1hA7UEAg" x="605"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_S8_RAHEoEeaJ-_1hA7UEAg" type="3008" element="_S8zq0XEoEeaJ-_1hA7UEAg">
-              <children xmi:type="notation:Node" xmi:id="_S8_4EHEoEeaJ-_1hA7UEAg" type="5005"/>
-              <children xmi:type="notation:Node" xmi:id="_S8_4EXEoEeaJ-_1hA7UEAg" type="7002">
-                <styles xmi:type="notation:SortingStyle" xmi:id="_S8_4EnEoEeaJ-_1hA7UEAg"/>
-                <styles xmi:type="notation:FilteringStyle" xmi:id="_S8_4E3EoEeaJ-_1hA7UEAg"/>
-                <styles xmi:type="notation:DrawerStyle" xmi:id="_S8_4FHEoEeaJ-_1hA7UEAg"/>
-              </children>
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_S8_RAXEoEeaJ-_1hA7UEAg" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S8_RAnEoEeaJ-_1hA7UEAg" x="706"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_PKZJJXEoEeaJ-_1hA7UEAg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_PKZJJnEoEeaJ-_1hA7UEAg"/>
           </children>
@@ -4162,11 +4110,12 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_PKYiEnEoEeaJ-_1hA7UEAg"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxE3EoEeaJ-_1hA7UEAg" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxE3EoEeaJ-_1hA7UEAg" name="YELLOW is the winner" childrenPresentation="HorizontalStack">
       <target xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.2"/>
       <semanticElements xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.2"/>
       <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxFHEoEeaJ-_1hA7UEAg"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxFXEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxFXEoEeaJ-_1hA7UEAg" showIcon="false" foregroundColor="255,255,255">
+        <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']"/>
@@ -4174,7 +4123,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.0"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.0"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxF3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxGHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxGHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4246,7 +4195,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.1"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.1"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxL3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxMHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxMHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4318,7 +4267,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.2"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.2"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxR3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxSHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxSHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4390,7 +4339,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.3"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.3"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxX3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxYHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxYHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4451,9 +4400,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxc3EoEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.38"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.38"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_S8048HEoEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxdHEoEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_RTUkgHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -4465,7 +4411,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.4"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.4"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxd3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxeHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxeHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4526,9 +4472,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxi3EoEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.39"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.39"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_S8048XEoEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxjHEoEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_SIkxgHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -4540,7 +4483,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.5"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.5"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxj3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxkHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxkHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4601,9 +4544,6 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxo3EoEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.40"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.40"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_S8048nEoEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxpHEoEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_SxnugHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
@@ -4615,7 +4555,7 @@
         <target xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.6"/>
         <semanticElements xmi:type="connectfour:Column" href="Game.connectfour#//@grids.2/@columns.6"/>
         <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxp3EoEeaJ-_1hA7UEAg"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxqHEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1" hideLabelByDefault="true">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_PKOxqHEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']"/>
@@ -4676,24 +4616,12 @@
         <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_PKOxu3EoEeaJ-_1hA7UEAg">
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.41"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.2/@cells.41"/>
-          <decorations xmi:type="viewpoint:Decoration" xmi:id="_S80483EoEeaJ-_1hA7UEAg">
-            <description xmi:type="description:SemanticBasedDecoration" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@decorationDescriptionsSet/@decorationDescriptions[name='CellWin']"/>
-          </decorations>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_PKOxvHEoEeaJ-_1hA7UEAg"/>
           <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_S8zq0HEoEeaJ-_1hA7UEAg" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
             <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_S8zq0XEoEeaJ-_1hA7UEAg" name="YELLOW is the winner">
-        <target xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.2"/>
-        <semanticElements xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.2"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_S80R4HEoEeaJ-_1hA7UEAg" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
-          <labelFormat>bold</labelFormat>
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Winner']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Winner']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']"/>
@@ -5279,7 +5207,7 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_H99M4nNzEeaWreVhqLNoQA"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_H94UY3NzEeaWreVhqLNoQA" name="RED should play" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_H94UY3NzEeaWreVhqLNoQA" name="YELLOW should play" childrenPresentation="HorizontalStack">
       <target xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.3"/>
       <semanticElements xmi:type="connectfour:Grid" href="Game.connectfour#//@grids.3"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_H94UZHNzEeaWreVhqLNoQA" showIcon="false" foregroundColor="255,255,255">
@@ -5547,8 +5475,8 @@
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.24"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.24"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_H94UuXNzEeaWreVhqLNoQA"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_7-DacnN0EeaWreVhqLNoQA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_none.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-vVvoCvqEeeHLpZkB0CD3A" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
@@ -5556,8 +5484,8 @@
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.31"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.31"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_H94UvHNzEeaWreVhqLNoQA"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_7-EBgHN0EeaWreVhqLNoQA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_none.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_9nhzACvqEeeHLpZkB0CD3A" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
@@ -5565,8 +5493,8 @@
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.38"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.38"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_H94Uv3NzEeaWreVhqLNoQA"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_AxnQEHN1EeaWreVhqLNoQA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_none.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_88stUCvqEeeHLpZkB0CD3A" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
@@ -5636,8 +5564,8 @@
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.39"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.39"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_H94U1nNzEeaWreVhqLNoQA"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_Axn3IHN1EeaWreVhqLNoQA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_none.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_-FVJUCvqEeeHLpZkB0CD3A" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>
@@ -5707,8 +5635,8 @@
           <target xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.40"/>
           <semanticElements xmi:type="connectfour:Cell" href="Game.connectfour#//@grids.3/@cells.40"/>
           <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_H94U7XNzEeaWreVhqLNoQA"/>
-          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_H94U7nNzEeaWreVhqLNoQA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_none.svg">
-            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style"/>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__P438CvqEeeHLpZkB0CD3A" showIcon="false" hideLabelByDefault="true" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.svg">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/org.obeonetwork.dsl.connectfour.design/description/connectfour.odesign#//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='GridWithShapes']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']"/>
         </ownedDiagramElements>

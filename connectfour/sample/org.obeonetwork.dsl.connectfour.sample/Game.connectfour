@@ -209,23 +209,23 @@
     <cells column="//@grids.3/@columns.0" line="//@grids.3/@lines.3"/>
     <cells column="//@grids.3/@columns.1" line="//@grids.3/@lines.3"/>
     <cells column="//@grids.3/@columns.2" line="//@grids.3/@lines.3"/>
-    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.3"/>
+    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.3" color="YELLOW"/>
     <cells column="//@grids.3/@columns.4" line="//@grids.3/@lines.3"/>
     <cells column="//@grids.3/@columns.5" line="//@grids.3/@lines.3"/>
     <cells column="//@grids.3/@columns.6" line="//@grids.3/@lines.3"/>
     <cells column="//@grids.3/@columns.0" line="//@grids.3/@lines.4"/>
     <cells column="//@grids.3/@columns.1" line="//@grids.3/@lines.4"/>
     <cells column="//@grids.3/@columns.2" line="//@grids.3/@lines.4"/>
-    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.4"/>
+    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.4" color="YELLOW"/>
     <cells column="//@grids.3/@columns.4" line="//@grids.3/@lines.4"/>
     <cells column="//@grids.3/@columns.5" line="//@grids.3/@lines.4"/>
     <cells column="//@grids.3/@columns.6" line="//@grids.3/@lines.4"/>
     <cells column="//@grids.3/@columns.0" line="//@grids.3/@lines.5"/>
     <cells column="//@grids.3/@columns.1" line="//@grids.3/@lines.5"/>
     <cells column="//@grids.3/@columns.2" line="//@grids.3/@lines.5" color="YELLOW"/>
-    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.5"/>
-    <cells column="//@grids.3/@columns.4" line="//@grids.3/@lines.5"/>
-    <cells column="//@grids.3/@columns.5" line="//@grids.3/@lines.5"/>
+    <cells column="//@grids.3/@columns.3" line="//@grids.3/@lines.5" color="RED"/>
+    <cells column="//@grids.3/@columns.4" line="//@grids.3/@lines.5" color="RED"/>
+    <cells column="//@grids.3/@columns.5" line="//@grids.3/@lines.5" color="RED"/>
     <cells column="//@grids.3/@columns.6" line="//@grids.3/@lines.5"/>
   </grids>
   <grids>

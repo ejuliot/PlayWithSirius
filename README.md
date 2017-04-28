@@ -13,6 +13,8 @@ You can play with two players. There are two diagrams:
 
 Computation for winner works for vertical and horizontal 4 cells alignement.
  
+ !documentation/images/connectfour.png!
+ 
  
 # Installation
 
