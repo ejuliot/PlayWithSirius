@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated connectfour -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.obeonetwork.dsl.connectfour.presentation.ConnectfourModelWizardID"
+            name="%_UI_ConnectfourModelWizard_label"
+            class="org.obeonetwork.dsl.connectfour.presentation.ConnectfourModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConnectfourModelFile.gif">
+         <description>%_UI_ConnectfourModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated connectfour -->
+      <editor
+            id="org.obeonetwork.dsl.connectfour.presentation.ConnectfourEditorID"
+            name="%_UI_ConnectfourEditor_label"
+            icon="icons/full/obj16/ConnectfourModelFile.gif"
+            extensions="connectfour"
+            class="org.obeonetwork.dsl.connectfour.presentation.ConnectfourEditor"
+            contributorClass="org.obeonetwork.dsl.connectfour.presentation.ConnectfourActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

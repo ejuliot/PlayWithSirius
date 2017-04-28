@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.connectfour/src" modelPluginID="org.obeonetwork.dsl.connectfour"
+    modelName="Connectfour" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>connectfour.ecore</foreignModel>
+  <genPackages prefix="Connectfour" basePackage="org.obeonetwork.dsl" disposableProviderFactory="true"
+      ecorePackage="connectfour.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="connectfour.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="connectfour.ecore#//Color/none"/>
+      <genEnumLiterals ecoreEnumLiteral="connectfour.ecore#//Color/red"/>
+      <genEnumLiterals ecoreEnumLiteral="connectfour.ecore#//Color/yellow"/>
+    </genEnums>
+    <genClasses ecoreClass="connectfour.ecore#//ConnectFour">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//ConnectFour/grids"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//ConnectFour/players"/>
+    </genClasses>
+    <genClasses ecoreClass="connectfour.ecore#//Grid">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/lines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/winner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="connectfour.ecore#//Cell">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Cell/column"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Cell/line"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Cell/color"/>
+    </genClasses>
+    <genClasses ecoreClass="connectfour.ecore#//Column">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Column/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="connectfour.ecore#//Line">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Line/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="connectfour.ecore#//Player">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Player/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Player/color"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
