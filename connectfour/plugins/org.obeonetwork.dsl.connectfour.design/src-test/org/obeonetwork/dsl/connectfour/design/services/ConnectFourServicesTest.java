@@ -26,21 +26,20 @@ public class ConnectFourServicesTest {
 	@Test
 	/**
 	 * Test diagonal
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0   . . . . . . . .
-	 * Line 1   . . . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . X .
-	 * Line 4   . . . . . X . .
-	 * Line 5   . . . . X . . .
-	 * Line 6   . . . X . . . .
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0   . . . . . . . 
+	 * Line 1   . . . . . . . 
+	 * Line 2   . . . . . . X 
+	 * Line 3   . . . . . X . 
+	 * Line 4   . . . . X . . 
+	 * Line 5   . . . X . . . 
 	 */
 	
 	public void testGetWinnerDiagInverse() {
-		grid.getLines().get(3).getCells().get(6).setColor(Color.RED);
-		grid.getLines().get(4).getCells().get(5).setColor(Color.RED);
-		grid.getLines().get(5).getCells().get(4).setColor(Color.RED);
-		grid.getLines().get(6).getCells().get(3).setColor(Color.RED);
+		grid.getLines().get(2).getCells().get(6).setColor(Color.RED);
+		grid.getLines().get(3).getCells().get(5).setColor(Color.RED);
+		grid.getLines().get(4).getCells().get(4).setColor(Color.RED);
+		grid.getLines().get(5).getCells().get(3).setColor(Color.RED);
 		
 		assertEquals(Color.RED, s.getWinner(grid));
 	}
@@ -48,14 +47,13 @@ public class ConnectFourServicesTest {
 	@Test
 	/**
 	 * Test with no winner
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0   . . . . . . . .
-	 * Line 1   . . . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . . .
-	 * Line 4   . . . . . . . .
-	 * Line 5   . . . . . . . .
-	 * Line 6   . . . . . . . .
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0   . . . . . . . 
+	 * Line 1   . . . . . . . 
+	 * Line 2   . . . . . . . 
+	 * Line 3   . . . . . . . 
+	 * Line 4   . . . . . . . 
+	 * Line 5   . . . . . . . 
 	 */
 	
 	public void testGetWinnerNoWinner() {
@@ -66,14 +64,13 @@ public class ConnectFourServicesTest {
 	@Test
 	/**
 	 * Test diagonal
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0  (X)X X X . . . .
-	 * Line 1   . . . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . . .
-	 * Line 4   . . . . . . . .
-	 * Line 5   . . . . . . . .
-	 * Line 6   . . . . . . . .
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0  (X)X X X . . . 
+	 * Line 1   . . . . . . . 
+	 * Line 2   . . . . . . . 
+	 * Line 3   . . . . . . . 
+	 * Line 4   . . . . . . . 
+	 * Line 5   . . . . . . . 
 	 */
 	public void testIsAWinnerCellTrue() {
 		grid.getLines().get(0).getCells().get(0).setColor(Color.RED);
@@ -87,14 +84,13 @@ public class ConnectFourServicesTest {
 	@Test
 	/**
 	 * Test diagonal
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0   X X X X . . . .
-	 * Line 1  (.). . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . . .
-	 * Line 4   . . . . . . . .
-	 * Line 5   . . . . . . . .
-	 * Line 6   . . . . . . . .
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0   X X X X . . . 
+	 * Line 1  (.). . . . . . 
+	 * Line 2   . . . . . . . 
+	 * Line 3   . . . . . . . 
+	 * Line 4   . . . . . . . 
+	 * Line 5   . . . . . . . 
 	 */
 	public void testIsAWinnerCellFalse() {
 		grid.getLines().get(0).getCells().get(0).setColor(Color.RED);
@@ -108,14 +104,13 @@ public class ConnectFourServicesTest {
 	@Test
 	/**
 	 * Test diagonal
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0   . . . . . . . .
-	 * Line 1  (.). . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . . .
-	 * Line 4   . . . . . . . .
-	 * Line 5   . . . . . . . .
-	 * Line 6   . . . . . . . .
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0   . . . . . . . 
+	 * Line 1  (.). . . . . . 
+	 * Line 2   . . . . . . . 
+	 * Line 3   . . . . . . . 
+	 * Line 4   . . . . . . . 
+	 * Line 5   . . . . . . . 
 	 */
 	public void testIsAWinnerCellFalseWithoutWInner() {		
 		assertEquals(false, s.isAWinnerCell(grid.getLines().get(1).getCells().get(0)));		

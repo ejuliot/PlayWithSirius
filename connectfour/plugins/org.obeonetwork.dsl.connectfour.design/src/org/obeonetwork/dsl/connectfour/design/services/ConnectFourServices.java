@@ -15,23 +15,22 @@ import org.obeonetwork.dsl.connectfour.Line;
 public class ConnectFourServices {
 
 	/**
-	 * Creation of an empty grid 8 columns X 7 lines (based on upper bound of domain domain)
-	 * Columns	0 1 2 3 4 5 6 7			
-	 * Line 0   . . . . . . . .
-	 * Line 1   . . . . . . . .
-	 * Line 2   . . . . . . . .
-	 * Line 3   . . . . . . . .
-	 * Line 4   . . . . . . . .
-	 * Line 5   . . . . . . . .
-	 * Line 7   . . . . . . . .
+	 * Creation of an empty grid 7 columns X 6 lines (based on upper bound of domain domain)
+	 * Columns	0 1 2 3 4 5 6			
+	 * Line 0   . . . . . . .
+	 * Line 1   . . . . . . .
+	 * Line 2   . . . . . . .
+	 * Line 3   . . . . . . .
+	 * Line 4   . . . . . . .
+	 * Line 5   . . . . . . .
 	 */
 	public void createGrid(ConnectFour game) {
 		Grid grid = ConnectfourFactory.eINSTANCE.createGrid();
-		for (int i = 0; i <= ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Columns().getUpperBound(); i++) {
+		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Columns().getUpperBound(); i++) {
 			Column col = ConnectfourFactory.eINSTANCE.createColumn();
 			grid.getColumns().add(col);
 		}
-		for (int i = 0; i <= ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Lines().getUpperBound(); i++) {
+		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Lines().getUpperBound(); i++) {
 			Line line = ConnectfourFactory.eINSTANCE.createLine();
 			grid.getLines().add(line);
 			
@@ -68,14 +67,13 @@ public class ConnectFourServices {
 		
 		/*
 		 * check lines such as :
-		 * Columns	0 1 2 3 4 5 6 7			
-		 * Line 0   . . . . . . . .
-		 * Line 1   . . . . . . . .
-		 * Line 2   . . . . . . . .
-		 * Line 3   . . . . . . . .
-		 * Line 4   . . . . . . . .
-		 * Line 5   X X X X . . . .
-		 * Line 6   . . . . . . . .
+		 * Columns	0 1 2 3 4 5 6 			
+		 * Line 0   . . . . . . . 
+		 * Line 1   . . . . . . . 
+		 * Line 2   . . . . . . . 
+		 * Line 3   . . . . . . . 
+		 * Line 4   . . . . . . . 
+		 * Line 5   X X X X . . . 
 		 */
 		for (Iterator<Line> iterator = grid.getLines().iterator(); 
 				iterator.hasNext() && winnersCell == null;) {
@@ -85,14 +83,13 @@ public class ConnectFourServices {
 		
 		/*
 		 * check columns such as :
-		 * Columns	0 1 2 3 4 5 6 7			
-		 * Line 0   . . . . . . . .
-		 * Line 1   . . . . . . . .
-		 * Line 2   . . . . . . . .
-		 * Line 3   X . . . . . . .
-		 * Line 4   X . . . . . . .
-		 * Line 5   X . . . . . . .
-		 * Line 6   X . . . . . . .
+		 * Columns	0 1 2 3 4 5 6 			
+		 * Line 0   . . . . . . . 
+		 * Line 1   . . . . . . . 
+		 * Line 2   X . . . . . . 
+		 * Line 3   X . . . . . . 
+		 * Line 4   X . . . . . . 
+		 * Line 5   X . . . . . . 
 		 */
 		if (winnersCell == null) {
 			for (Iterator<Column> iterator = grid.getColumns().iterator(); 
@@ -104,14 +101,13 @@ public class ConnectFourServices {
 		
 		/*
 		 * check diagonal top left to bottom right such as :
-		 * Columns	0 1 2 3 4 5 6 7			
-		 * Line 0   . . . . . . . .
-		 * Line 1   . . . . . . . .
-		 * Line 2   . . . . . . . .
-		 * Line 3   X . . . . . . .
-		 * Line 4   . X . . . . . .
-		 * Line 5   . . X . . . . .
-		 * Line 6   . . . X . . . .
+		 * Columns	0 1 2 3 4 5 6 			
+		 * Line 0   . . . . . . . 
+		 * Line 1   . . . . . . . 
+		 * Line 2   X . . . . . . 
+		 * Line 3   . X . . . . . 
+		 * Line 4   . . X . . . . 
+		 * Line 5   . . . X . . . 
 		 */
 		// Bottom left. don't need to start too low
 		for (int l = grid.getLines().size()-4 ; l >= 0  && winnersCell == null; l--)
@@ -123,14 +119,13 @@ public class ConnectFourServices {
 		
 		/*
 		 * check diagonal top right to bottom left such as :
-		 * Columns	0 1 2 3 4 5 6 7			
-		 * Line 0   . . . . . . . .
-		 * Line 1   . . . . . . . .
-		 * Line 2   . . . . . . . .
-		 * Line 3   . . . . X . . .
-		 * Line 4   . . . X . . . .
-		 * Line 5   . . X . . . . .
-		 * Line 6   . X . . . . . .
+		 * Columns	0 1 2 3 4 5 6 			
+		 * Line 0   . . . . . . . 
+		 * Line 1   . . . . . . . 
+		 * Line 2   . . . . X . . 
+		 * Line 3   . . . X . . . 
+		 * Line 4   . . X . . . . 
+		 * Line 5   . X . . . . . 
 		 */
 		// bottom right
 		for (int l = grid.getLines().size()-4 ; l >= 0 && winnersCell == null; l--) 
