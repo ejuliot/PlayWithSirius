@@ -14,13 +14,24 @@ import org.obeonetwork.dsl.connectfour.Line;
 
 public class ConnectFourServices {
 
+	/**
+	 * Creation of an empty grid 8 columns X 7 lines (based on upper bound of domain domain)
+	 * Columns	0 1 2 3 4 5 6 7			
+	 * Line 0   . . . . . . . .
+	 * Line 1   . . . . . . . .
+	 * Line 2   . . . . . . . .
+	 * Line 3   . . . . . . . .
+	 * Line 4   . . . . . . . .
+	 * Line 5   . . . . . . . .
+	 * Line 7   . . . . . . . .
+	 */
 	public void createGrid(ConnectFour game) {
 		Grid grid = ConnectfourFactory.eINSTANCE.createGrid();
-		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Columns().getUpperBound(); i++) {
+		for (int i = 0; i <= ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Columns().getUpperBound(); i++) {
 			Column col = ConnectfourFactory.eINSTANCE.createColumn();
 			grid.getColumns().add(col);
 		}
-		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Lines().getUpperBound(); i++) {
+		for (int i = 0; i <= ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Lines().getUpperBound(); i++) {
 			Line line = ConnectfourFactory.eINSTANCE.createLine();
 			grid.getLines().add(line);
 			
@@ -44,22 +55,45 @@ public class ConnectFourServices {
 	}
 	
 
-	
 	public boolean isAWinnerCell(Cell cell) {
-		return getWinnerCells((Grid)cell.eContainer()).contains(cell);
+		List<Cell> winnerCells = getWinnerCells((Grid)cell.eContainer());
+		if (winnerCells == null) 
+			return false;
+		else
+			return winnerCells.contains(cell);
 	}
 	
 	public List<Cell> getWinnerCells(Grid grid) {
 		List<Cell> winnersCell = null;
 		
-		// check lines
+		/*
+		 * check lines such as :
+		 * Columns	0 1 2 3 4 5 6 7			
+		 * Line 0   . . . . . . . .
+		 * Line 1   . . . . . . . .
+		 * Line 2   . . . . . . . .
+		 * Line 3   . . . . . . . .
+		 * Line 4   . . . . . . . .
+		 * Line 5   X X X X . . . .
+		 * Line 6   . . . . . . . .
+		 */
 		for (Iterator<Line> iterator = grid.getLines().iterator(); 
 				iterator.hasNext() && winnersCell == null;) {
 			Line line = iterator.next();
 			winnersCell = getWinnerCells(line.getCells());
 		}
 		
-		// check columns
+		/*
+		 * check columns such as :
+		 * Columns	0 1 2 3 4 5 6 7			
+		 * Line 0   . . . . . . . .
+		 * Line 1   . . . . . . . .
+		 * Line 2   . . . . . . . .
+		 * Line 3   X . . . . . . .
+		 * Line 4   X . . . . . . .
+		 * Line 5   X . . . . . . .
+		 * Line 6   X . . . . . . .
+		 */
 		if (winnersCell == null) {
 			for (Iterator<Column> iterator = grid.getColumns().iterator(); 
 					iterator.hasNext() && winnersCell == null;) {
@@ -68,22 +102,44 @@ public class ConnectFourServices {
 			}
 		}		
 		
-		// check diagonal top left to bottom right
-		if (winnersCell == null) 
-			for (int l = grid.getLines().size()-4 ; l > 0 ; l--)
-				winnersCell = getWinnerCellsForDiagonal(grid, 0, l, true);
-		if (winnersCell == null) 
-			for (int c = 0 ; c < grid.getColumns().size() - 4  ; c++)
-				winnersCell = getWinnerCellsForDiagonal(grid, c, 0, true);
+		/*
+		 * check diagonal top left to bottom right such as :
+		 * Columns	0 1 2 3 4 5 6 7			
+		 * Line 0   . . . . . . . .
+		 * Line 1   . . . . . . . .
+		 * Line 2   . . . . . . . .
+		 * Line 3   X . . . . . . .
+		 * Line 4   . X . . . . . .
+		 * Line 5   . . X . . . . .
+		 * Line 6   . . . X . . . .
+		 */
+		// Bottom left. don't need to start too low
+		for (int l = grid.getLines().size()-4 ; l >= 0  && winnersCell == null; l--)
+			winnersCell = getWinnerCellsForDiagonal(grid, 0, l, true);
+	
+		// up right.
+		for (int c = 0 ; c < grid.getColumns().size() - 4  && winnersCell == null; c++)
+			winnersCell = getWinnerCellsForDiagonal(grid, c, 0, true);
+		
+		/*
+		 * check diagonal top right to bottom left such as :
+		 * Columns	0 1 2 3 4 5 6 7			
+		 * Line 0   . . . . . . . .
+		 * Line 1   . . . . . . . .
+		 * Line 2   . . . . . . . .
+		 * Line 3   . . . . X . . .
+		 * Line 4   . . . X . . . .
+		 * Line 5   . . X . . . . .
+		 * Line 6   . X . . . . . .
+		 */
+		// bottom right
+		for (int l = grid.getLines().size()-4 ; l >= 0 && winnersCell == null; l--) 
+			winnersCell = getWinnerCellsForDiagonal(grid, grid.getColumns().size() -1, l, false);
+		// up left
+		for (int c = grid.getColumns().size() - 1; c >= 4 && winnersCell == null ; c--)
+			winnersCell = getWinnerCellsForDiagonal(grid, c, 0, false);
+		
 			
-		// check diagonal top right to bottom left
-		if (winnersCell == null) 
-			for (int l = grid.getLines().size()-4 ; l > 0 && winnersCell != null; l--) {
-				//winnersCell = getWinnerCellsForDiagonal(grid, grid.getColumns().size(), l, false);
-				for (int c = grid.getColumns().size() ; c >= 4 ; c--)
-					winnersCell = getWinnerCellsForDiagonal(grid, c, l, false);
-			}
-				
 		return winnersCell;
 	}
 	
@@ -109,6 +165,14 @@ public class ConnectFourServices {
 		return null;
 	}
 	
+	/**
+	 * Check winner in one diagonal
+	 * @param grid
+	 * @param iCol start column
+	 * @param iLine start line
+	 * @param isTopLeftToBottomRight direction
+	 * @return list of winning cells or null
+	 */
 	private List<Cell> getWinnerCellsForDiagonal(Grid grid, int iCol, int iLine, boolean isTopLeftToBottomRight) {
 		List<Cell> winnersCell = new ArrayList<Cell>();
 		int l = iLine;
@@ -137,7 +201,7 @@ public class ConnectFourServices {
 			}
 		} else {
 			for (int c = iCol; c > iCol - 4; c--) {
-				Column col = grid.getColumns().get(c); // TODO c -1 ?
+				Column col = grid.getColumns().get(c); 
 				
 				Cell cell = col.getCells().get(l);
 				if (cell.getColor() == previousColor) {

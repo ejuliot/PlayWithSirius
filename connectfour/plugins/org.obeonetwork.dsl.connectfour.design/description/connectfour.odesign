@@ -251,7 +251,7 @@
           </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>
-          <decorationDescriptions xsi:type="description:SemanticBasedDecoration" name="CellWin" position="CENTER" decoratorPath="/org.obeonetwork.dsl.connectfour.design/images/add_obj.gif" preconditionExpression="aql:false and self.isAWinnerCell()" domainClass="connectfour.Cell"/>
+          <decorationDescriptions xsi:type="description:SemanticBasedDecoration" name="CellWin" position="CENTER" decoratorPath="/org.obeonetwork.dsl.connectfour.design/images/add_obj.gif" preconditionExpression="aql:self.isAWinnerCell()" domainClass="connectfour.Cell"/>
         </decorationDescriptionsSet>
       </defaultLayer>
     </ownedRepresentations>
