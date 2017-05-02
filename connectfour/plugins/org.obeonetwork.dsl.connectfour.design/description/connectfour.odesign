@@ -45,6 +45,56 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="Computed Grids">
+        <edgeMappings name="grid to grid" sourceMapping="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Grid']" targetMapping="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']" targetFinderExpression="aql:self">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="GC_Grid" semanticCandidatesExpression="feature:grids" domainClass="connectfour.Grid" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="Column" semanticCandidatesExpression="feature:columns" domainClass="connectfour.Column" childrenPresentation="VerticalStack">
+            <subContainerMappings name="CellLine" semanticCandidatesExpression="feature:cells" domainClass="connectfour.Cell">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.color = connectfour::Color::red">
+                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1" backgroundStyle="Liquid">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                  <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.color = connectfour::Color::yellow">
+                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1" backgroundStyle="Liquid">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+                  <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+                </style>
+              </conditionnalStyles>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:if (self.getWinner() &lt;> connectfour::Color::none) then self.getWinner().toString() + ' is the winner' else 'Not yet a winner'  endif" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:if (self.getWinner() &lt;> connectfour::Color::none) then self.getWinner().toString() + ' is the winner' else (if (self.cells->select(myCell | myCell.color = connectfour::Color::red)->size() &lt; self.cells->select(myCell | myCell.color = connectfour::Color::yellow)->size()) then 'RED' else 'YELLOW' endif) + ' should play'  endif" hideLabelByDefault="true" widthComputationExpression="aql:self.columns->size() * 2">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Grid" domainClass="connectfour.Grid" enablePopupBars="true">
       <metamodel href="http://www.obeonetwork.org/dsl/connectfour#/"/>
