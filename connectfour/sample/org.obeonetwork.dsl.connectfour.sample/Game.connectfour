@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <connectfour:ConnectFour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectfour="http://www.obeonetwork.org/dsl/connectfour">
+  <grids>
+    <columns cells="//@grids.0/@cells.0 //@grids.0/@cells.7 //@grids.0/@cells.14 //@grids.0/@cells.21 //@grids.0/@cells.28 //@grids.0/@cells.35"/>
+    <columns cells="//@grids.0/@cells.1 //@grids.0/@cells.8 //@grids.0/@cells.15 //@grids.0/@cells.22 //@grids.0/@cells.29 //@grids.0/@cells.36"/>
+    <columns cells="//@grids.0/@cells.2 //@grids.0/@cells.9 //@grids.0/@cells.16 //@grids.0/@cells.23 //@grids.0/@cells.30 //@grids.0/@cells.37"/>
+    <columns cells="//@grids.0/@cells.3 //@grids.0/@cells.10 //@grids.0/@cells.17 //@grids.0/@cells.24 //@grids.0/@cells.31 //@grids.0/@cells.38"/>
+    <columns cells="//@grids.0/@cells.4 //@grids.0/@cells.11 //@grids.0/@cells.18 //@grids.0/@cells.25 //@grids.0/@cells.32 //@grids.0/@cells.39"/>
+    <columns cells="//@grids.0/@cells.5 //@grids.0/@cells.12 //@grids.0/@cells.19 //@grids.0/@cells.26 //@grids.0/@cells.33 //@grids.0/@cells.40"/>
+    <columns cells="//@grids.0/@cells.6 //@grids.0/@cells.13 //@grids.0/@cells.20 //@grids.0/@cells.27 //@grids.0/@cells.34 //@grids.0/@cells.41"/>
+    <lines cells="//@grids.0/@cells.0 //@grids.0/@cells.1 //@grids.0/@cells.2 //@grids.0/@cells.3 //@grids.0/@cells.4 //@grids.0/@cells.5 //@grids.0/@cells.6"/>
+    <lines cells="//@grids.0/@cells.7 //@grids.0/@cells.8 //@grids.0/@cells.9 //@grids.0/@cells.10 //@grids.0/@cells.11 //@grids.0/@cells.12 //@grids.0/@cells.13"/>
+    <lines cells="//@grids.0/@cells.14 //@grids.0/@cells.15 //@grids.0/@cells.16 //@grids.0/@cells.17 //@grids.0/@cells.18 //@grids.0/@cells.19 //@grids.0/@cells.20"/>
+    <lines cells="//@grids.0/@cells.21 //@grids.0/@cells.22 //@grids.0/@cells.23 //@grids.0/@cells.24 //@grids.0/@cells.25 //@grids.0/@cells.26 //@grids.0/@cells.27"/>
+    <lines cells="//@grids.0/@cells.28 //@grids.0/@cells.29 //@grids.0/@cells.30 //@grids.0/@cells.31 //@grids.0/@cells.32 //@grids.0/@cells.33 //@grids.0/@cells.34"/>
+    <lines cells="//@grids.0/@cells.35 //@grids.0/@cells.36 //@grids.0/@cells.37 //@grids.0/@cells.38 //@grids.0/@cells.39 //@grids.0/@cells.40 //@grids.0/@cells.41"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.0"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.1"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.2" color="RED"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.2"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.3" color="RED"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.3"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.4"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.4"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.4"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.4" color="RED"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.4" color="YELLOW"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.4"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.4"/>
+    <cells column="//@grids.0/@columns.0" line="//@grids.0/@lines.5"/>
+    <cells column="//@grids.0/@columns.1" line="//@grids.0/@lines.5"/>
+    <cells column="//@grids.0/@columns.2" line="//@grids.0/@lines.5" color="YELLOW"/>
+    <cells column="//@grids.0/@columns.3" line="//@grids.0/@lines.5" color="RED"/>
+    <cells column="//@grids.0/@columns.4" line="//@grids.0/@lines.5" color="YELLOW"/>
+    <cells column="//@grids.0/@columns.5" line="//@grids.0/@lines.5" color="YELLOW"/>
+    <cells column="//@grids.0/@columns.6" line="//@grids.0/@lines.5"/>
+  </grids>
+  <grids>
+    <columns cells="//@grids.1/@cells.0 //@grids.1/@cells.7 //@grids.1/@cells.14 //@grids.1/@cells.21 //@grids.1/@cells.28 //@grids.1/@cells.35"/>
+    <columns cells="//@grids.1/@cells.1 //@grids.1/@cells.8 //@grids.1/@cells.15 //@grids.1/@cells.22 //@grids.1/@cells.29 //@grids.1/@cells.36"/>
+    <columns cells="//@grids.1/@cells.2 //@grids.1/@cells.9 //@grids.1/@cells.16 //@grids.1/@cells.23 //@grids.1/@cells.30 //@grids.1/@cells.37"/>
+    <columns cells="//@grids.1/@cells.3 //@grids.1/@cells.10 //@grids.1/@cells.17 //@grids.1/@cells.24 //@grids.1/@cells.31 //@grids.1/@cells.38"/>
+    <columns cells="//@grids.1/@cells.4 //@grids.1/@cells.11 //@grids.1/@cells.18 //@grids.1/@cells.25 //@grids.1/@cells.32 //@grids.1/@cells.39"/>
+    <columns cells="//@grids.1/@cells.5 //@grids.1/@cells.12 //@grids.1/@cells.19 //@grids.1/@cells.26 //@grids.1/@cells.33 //@grids.1/@cells.40"/>
+    <columns cells="//@grids.1/@cells.6 //@grids.1/@cells.13 //@grids.1/@cells.20 //@grids.1/@cells.27 //@grids.1/@cells.34 //@grids.1/@cells.41"/>
+    <lines cells="//@grids.1/@cells.0 //@grids.1/@cells.1 //@grids.1/@cells.2 //@grids.1/@cells.3 //@grids.1/@cells.4 //@grids.1/@cells.5 //@grids.1/@cells.6"/>
+    <lines cells="//@grids.1/@cells.7 //@grids.1/@cells.8 //@grids.1/@cells.9 //@grids.1/@cells.10 //@grids.1/@cells.11 //@grids.1/@cells.12 //@grids.1/@cells.13"/>
+    <lines cells="//@grids.1/@cells.14 //@grids.1/@cells.15 //@grids.1/@cells.16 //@grids.1/@cells.17 //@grids.1/@cells.18 //@grids.1/@cells.19 //@grids.1/@cells.20"/>
+    <lines cells="//@grids.1/@cells.21 //@grids.1/@cells.22 //@grids.1/@cells.23 //@grids.1/@cells.24 //@grids.1/@cells.25 //@grids.1/@cells.26 //@grids.1/@cells.27"/>
+    <lines cells="//@grids.1/@cells.28 //@grids.1/@cells.29 //@grids.1/@cells.30 //@grids.1/@cells.31 //@grids.1/@cells.32 //@grids.1/@cells.33 //@grids.1/@cells.34"/>
+    <lines cells="//@grids.1/@cells.35 //@grids.1/@cells.36 //@grids.1/@cells.37 //@grids.1/@cells.38 //@grids.1/@cells.39 //@grids.1/@cells.40 //@grids.1/@cells.41"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.0"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.1"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.2"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.3"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.4"/>
+    <cells column="//@grids.1/@columns.0" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.1" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.2" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.3" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.4" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.5" line="//@grids.1/@lines.5"/>
+    <cells column="//@grids.1/@columns.6" line="//@grids.1/@lines.5"/>
+  </grids>
   <players name="John"/>
   <players name="Mat"/>
   <players name="Lea"/>

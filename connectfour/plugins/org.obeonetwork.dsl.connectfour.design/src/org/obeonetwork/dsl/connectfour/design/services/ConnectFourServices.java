@@ -1,5 +1,7 @@
 package org.obeonetwork.dsl.connectfour.design.services;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -43,6 +45,10 @@ public class ConnectFourServices {
 		}
 		game.getGrids().add(grid);
 		
+	}
+	
+	public String now(Grid grid) {
+		return LocalDateTime.now().toString();
 	}
 	
 	public Color getWinner(Grid grid) {
