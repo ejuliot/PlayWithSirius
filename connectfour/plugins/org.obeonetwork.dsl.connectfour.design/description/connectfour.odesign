@@ -5,8 +5,9 @@
       <metamodel href="http://www.obeonetwork.org/dsl/connectfour#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="Player" semanticCandidatesExpression="feature:players" domainClass="connectfour.Player">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Animator.png">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.connectfour.design/images/Animator.png">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
@@ -44,6 +45,18 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(connectfour::Player).color = connectfour::Color::red">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Player']/@style" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(connectfour::Player).color = connectfour::Color::yellow">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Player']/@style" referenceName="labelColor">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+        </customization>
       </defaultLayer>
       <additionalLayers name="Computed Grids">
         <edgeMappings name="grid to grid" sourceMapping="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Grid']" targetMapping="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']" targetFinderExpression="aql:self">
@@ -54,9 +67,9 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="GC_Grid" semanticCandidatesExpression="feature:grids" domainClass="connectfour.Grid" childrenPresentation="HorizontalStack">
+        <containerMappings name="GC_Grid" navigationDescriptions="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@toolSections.0/@ownedTools[name='GridNav']" semanticCandidatesExpression="feature:grids" domainClass="connectfour.Grid" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Column" semanticCandidatesExpression="feature:columns" domainClass="connectfour.Column" childrenPresentation="VerticalStack">
-            <subContainerMappings name="CellLine" semanticCandidatesExpression="feature:cells" domainClass="connectfour.Cell">
+            <subContainerMappings name="CellLine" semanticCandidatesExpression="feature:cells" doubleClickDescription="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@toolSections.0/@ownedTools[name='CompGridDblClic']" domainClass="connectfour.Cell">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -94,6 +107,22 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </containerMappings>
+        <toolSections name="Comp Grid">
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="GridNav" diagramDescription="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Grid']">
+            <containerViewVariable name="containerView"/>
+            <containerVariable name="container"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="CompGridDblClic" mappings="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer(connectfour::Grid)">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Grid']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(connectfour::Cell).isAWinnerCell()">
             <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.0/@style //@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@conditionnalStyles.1/@style //@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Game%20Center']/@additionalLayers[name='Computed%20Grids']/@containerMappings[name='GC_Grid']/@subContainerMappings[name='Column']/@subContainerMappings[name='CellLine']/@style" referenceName="backgroundColor">
@@ -161,7 +190,7 @@
           </style>
         </containerMappings>
         <toolSections name="Players">
-          <ownedTools xsi:type="tool_1:ToolDescription" name="Red" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() &lt; self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size()" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.png">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Red" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() &lt; self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size() or self.target.oclAsType(connectfour::Player).color = connectfour::Color::yellow" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.png">
             <filters precondition="aql:self.eContainerOrSelf(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() &lt; self.eContainerOrSelf(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size()" elementsToListen="aql:self.eContainerOrSelf(connectfour::Grid).cells">
               <listeners domainClass="connectfour.Cell" featureName="color"/>
             </filters>
@@ -173,7 +202,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="Yellow" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() >= self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size()" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.png">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Yellow" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() >= self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size() or self.target.oclAsType(connectfour::Player).color = connectfour::Color::yellow" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.png">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -189,6 +218,40 @@
                 <subModelOperations xsi:type="tool_1:For" expression="feature:cells" iteratorName="cell">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:connectfour::Color::none"/>
                 </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description:SemanticBasedDecoration" name="CellWin" position="CENTER" decoratorPath="/org.obeonetwork.dsl.connectfour.design/images/add_obj.gif" preconditionExpression="aql:self.isAWinnerCell()" domainClass="connectfour.Cell"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GridForPlayer" titleExpression="aql:self.name + ' Grids'" domainClass="connectfour.Player" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="Grid4P_Grid" semanticCandidatesExpression="aql:self.eContainer(connectfour::ConnectFour).grids" reusedContainerMappings="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Grid']/@defaultLayer/@containerMappings[name='Grid_Grid']/@subContainerMappings[name='Column']" childrenPresentation="HorizontalStack" importedMapping="//@ownedViewpoints[name='Connect%20Four']/@ownedRepresentations[name='Grid']/@defaultLayer/@containerMappings[name='Grid_Grid']"/>
+        <toolSections name="Players">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Red" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() &lt; self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size() and self.eContainer().getWinner() = connectfour::Color::none" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_red.png">
+            <filters precondition="aql:(self.target.eContainerOrSelf(connectfour::ConnectFour).grids.cells->select(myCell | myCell.color = connectfour::Color::red )->size() >= self.target.eContainerOrSelf(connectfour::ConnectFour).grids.cells->select(myCell | myCell.color = connectfour::Color::yellow )->size()) or self.target.oclAsType(connectfour::Player).color = connectfour::Color::yellow" elementsToListen="aql:self.eContainerOrSelf(connectfour::ConnectFour).grids.cells">
+              <listeners domainClass="connectfour.Cell" featureName="color"/>
+            </filters>
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->last()">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:connectfour::Color::red"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Yellow" precondition="aql:self.oclIsTypeOf(connectfour::Column) and self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->size() > 0 and self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::red)->size() >= self.eContainer(connectfour::Grid).cells->select(myCell | myCell.color = connectfour::Color::yellow)->size()" iconPath="/org.obeonetwork.dsl.connectfour.design/images/Cell_yellow.png">
+            <filters precondition="aql:(self.target.eContainerOrSelf(connectfour::ConnectFour).grids.cells->select(myCell | myCell.color = connectfour::Color::red )->size() &lt; self.target.eContainerOrSelf(connectfour::ConnectFour).grids.cells->select(myCell | myCell.color = connectfour::Color::yellow )->size()) or self.target.oclAsType(connectfour::Player).color = connectfour::Color::red or self.target.oclAsType(connectfour::Player).color = connectfour::Color::red" elementsToListen="aql:self.eContainerOrSelf(connectfour::ConnectFour).grids.cells">
+              <listeners domainClass="connectfour.Cell" featureName="color"/>
+            </filters>
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(connectfour::Column).cells->select(myCell | myCell.color = connectfour::Color::none)->last()">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="color" valueExpression="aql:connectfour::Color::yellow"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

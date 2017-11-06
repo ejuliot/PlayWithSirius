@@ -5,8 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ConnectFour">
     <eStructuralFeatures xsi:type="ecore:EReference" name="grids" upperBound="-1"
         eType="#//Grid" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="players" upperBound="2"
-        eType="#//Player" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="players" eType="#//Player"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Grid">
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="7"
