@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="tictactoe" version="11.1.1.201610211630">
+  <ownedViewpoints name="Tic Tac Toe" modelFileExtension="tictactoe">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Game Center" initialisation="true" domainClass="tictactoe.TicTacToe" enablePopupBars="true">
+      <metamodel href="http://www.obeonetwork.org/dsl/tictactoe#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Grid3D" semanticCandidatesExpression="feature:grids3d" doubleClickDescription="//@ownedViewpoints[name='Tic%20Tac%20Toe']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@toolSections.0/@ownedTools[name='dblclicgrid']" domainClass="tictactoe.Grid3D">
+          <style xsi:type="style:SquareDescription" labelExpression="aql:''" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Game">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create 3D Grid" nodeMappings="//@ownedViewpoints[name='Tic%20Tac%20Toe']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Grid3D']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createGrid3D()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="dblclicgrid" mappings="//@ownedViewpoints[name='Tic%20Tac%20Toe']/@ownedRepresentations[name='Game%20Center']/@defaultLayer/@nodeMappings[name='Grid3D']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='Tic%20Tac%20Toe']/@ownedRepresentations[name='Grid%203D']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Grid 3D" titleExpression="service:now()" initialisation="true" domainClass="tictactoe.Grid3D" enablePopupBars="true">
+      <metamodel href="http://www.obeonetwork.org/dsl/tictactoe#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="G3D_Grid" semanticCandidatesExpression="feature:grids" domainClass="tictactoe.Grid" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="G3D_Column" semanticCandidatesExpression="feature:columns" domainClass="tictactoe.Column" childrenPresentation="VerticalStack">
+            <subContainerMappings name="G3D_CellLine" semanticCandidatesExpression="feature:cells" domainClass="tictactoe.Cell">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+              <conditionnalStyles predicateExpression="aql:self.mark = tictactoe::Mark::cross">
+                <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" showIcon="false" labelExpression="" sizeComputationExpression="30" workspacePath="/org.obeonetwork.dsl.tictactoe.design/images/cross.svg">
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql:self.mark = tictactoe::Mark::circle">
+                <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" showIcon="false" labelExpression="" sizeComputationExpression="45" workspacePath="/org.obeonetwork.dsl.tictactoe.design/images/circle.svg">
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </conditionnalStyles>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" showIcon="false" labelExpression="aql:'Level ' + self.eContainer().grids->indexOf(self)" labelColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue4']" widthComputationExpression="1" heightComputationExpression="1" backgroundColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']" foregroundColor="//@userColorsPalettes[name='Obeo']/@entries[name='obeo_blue1']"/>
+        </containerMappings>
+        <toolSections name="Players">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Cross" precondition="aql:self.oclIsTypeOf(tictactoe::Cell) and self.oclAsType(tictactoe::Cell).mark = tictactoe::Mark::none" iconPath="/org.obeonetwork.dsl.tictactoe.design/images/cross.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="mark" valueExpression="aql:tictactoe::Mark::cross"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="Circle" precondition="aql:self.oclIsTypeOf(tictactoe::Cell) and self.oclAsType(tictactoe::Cell).mark = tictactoe::Mark::none" iconPath="/org.obeonetwork.dsl.tictactoe.design/images/circle.png">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="mark" valueExpression="aql:tictactoe::Mark::circle"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description:SemanticBasedDecoration" name="Cel Win" position="CENTER" decoratorPath="/org.obeonetwork.dsl.tictactoe.design/images/add_obj.gif" preconditionExpression="aql:self.oclAsType(tictactoe::Cell).isAWinnerCellFor3D()" domainClass="tictactoe.Cell"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+      <additionalLayers name="Winner" activeByDefault="true">
+        <nodeMappings name="Win" semanticCandidatesExpression="aql:if (self.getWinnerCells() &lt;> null) then self else Sequence{} endif" domainClass="tictactoe.Grid3D">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="aql:''" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.tictactoe.design/images/b_1_q_0_p_0.jpg.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.tictactoe.design.Services"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="Obeo">
+    <entries xsi:type="description:UserFixedColor" red="251" green="184" name="obeo_orange"/>
+    <entries xsi:type="description:UserFixedColor" red="186" green="223" blue="225" name="obeo_blue1"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="157" blue="181" name="obeo_blue3"/>
+    <entries xsi:type="description:UserFixedColor" red="0" green="119" blue="136" name="obeo_blue4"/>
+  </userColorsPalettes>
+</description:Group>

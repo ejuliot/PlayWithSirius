@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated tictactoe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="tictactoe.presentation.TictactoeModelWizardID"
+            name="%_UI_TictactoeModelWizard_label"
+            class="tictactoe.presentation.TictactoeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TictactoeModelFile.gif">
+         <description>%_UI_TictactoeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated tictactoe -->
+      <editor
+            id="tictactoe.presentation.TictactoeEditorID"
+            name="%_UI_TictactoeEditor_label"
+            icon="icons/full/obj16/TictactoeModelFile.gif"
+            extensions="tictactoe"
+            class="tictactoe.presentation.TictactoeEditor"
+            contributorClass="tictactoe.presentation.TictactoeActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
