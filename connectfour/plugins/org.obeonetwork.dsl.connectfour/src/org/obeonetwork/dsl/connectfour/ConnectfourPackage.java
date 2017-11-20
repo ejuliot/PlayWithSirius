@@ -132,22 +132,49 @@ public interface ConnectfourPackage extends EPackage {
 	int GRID__LINES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Winner</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRID__WINNER = 2;
-
-	/**
 	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRID__CELLS = 3;
+	int GRID__CELLS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__TIME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Winner</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__WINNER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Player1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__PLAYER1 = 5;
+
+	/**
+	 * The feature id for the '<em><b>Player2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRID__PLAYER2 = 6;
 
 	/**
 	 * The number of structural features of the '<em>Grid</em>' class.
@@ -156,7 +183,7 @@ public interface ConnectfourPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GRID_FEATURE_COUNT = 4;
+	int GRID_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Grid</em>' class.
@@ -316,13 +343,13 @@ public interface ConnectfourPackage extends EPackage {
 	int PLAYER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * The feature id for the '<em><b>Victories</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER__COLOR = 1;
+	int PLAYER__VICTORIES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Player</em>' class.
@@ -429,6 +456,28 @@ public interface ConnectfourPackage extends EPackage {
 	EReference getGrid_Winner();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.connectfour.Grid#getPlayer1 <em>Player1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Player1</em>'.
+	 * @see org.obeonetwork.dsl.connectfour.Grid#getPlayer1()
+	 * @see #getGrid()
+	 * @generated
+	 */
+	EReference getGrid_Player1();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.connectfour.Grid#getPlayer2 <em>Player2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Player2</em>'.
+	 * @see org.obeonetwork.dsl.connectfour.Grid#getPlayer2()
+	 * @see #getGrid()
+	 * @generated
+	 */
+	EReference getGrid_Player2();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.connectfour.Grid#getCells <em>Cells</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -438,6 +487,17 @@ public interface ConnectfourPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGrid_Cells();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.connectfour.Grid#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time</em>'.
+	 * @see org.obeonetwork.dsl.connectfour.Grid#getTime()
+	 * @see #getGrid()
+	 * @generated
+	 */
+	EAttribute getGrid_Time();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.connectfour.Cell <em>Cell</em>}'.
@@ -546,15 +606,15 @@ public interface ConnectfourPackage extends EPackage {
 	EAttribute getPlayer_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.connectfour.Player#getColor <em>Color</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.connectfour.Player#getVictories <em>Victories</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Color</em>'.
-	 * @see org.obeonetwork.dsl.connectfour.Player#getColor()
+	 * @return the meta object for the reference list '<em>Victories</em>'.
+	 * @see org.obeonetwork.dsl.connectfour.Player#getVictories()
 	 * @see #getPlayer()
 	 * @generated
 	 */
-	EAttribute getPlayer_Color();
+	EReference getPlayer_Victories();
 
 	/**
 	 * Returns the meta object for enum '{@link org.obeonetwork.dsl.connectfour.Color <em>Color</em>}'.
@@ -650,12 +710,36 @@ public interface ConnectfourPackage extends EPackage {
 		EReference GRID__WINNER = eINSTANCE.getGrid_Winner();
 
 		/**
+		 * The meta object literal for the '<em><b>Player1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GRID__PLAYER1 = eINSTANCE.getGrid_Player1();
+
+		/**
+		 * The meta object literal for the '<em><b>Player2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GRID__PLAYER2 = eINSTANCE.getGrid_Player2();
+
+		/**
 		 * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GRID__CELLS = eINSTANCE.getGrid_Cells();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRID__TIME = eINSTANCE.getGrid_Time();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.connectfour.impl.CellImpl <em>Cell</em>}' class.
@@ -746,12 +830,12 @@ public interface ConnectfourPackage extends EPackage {
 		EAttribute PLAYER__NAME = eINSTANCE.getPlayer_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Victories</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PLAYER__COLOR = eINSTANCE.getPlayer_Color();
+		EReference PLAYER__VICTORIES = eINSTANCE.getPlayer_Victories();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.connectfour.Color <em>Color</em>}' enum.

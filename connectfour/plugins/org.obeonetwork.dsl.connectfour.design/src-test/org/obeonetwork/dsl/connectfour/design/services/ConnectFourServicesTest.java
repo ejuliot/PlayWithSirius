@@ -29,6 +29,27 @@ public class ConnectFourServicesTest {
 	 * Columns	0 1 2 3 4 5 6 			
 	 * Line 0   . . . . . . . 
 	 * Line 1   . . . . . . . 
+	 * Line 2   . . . X . . . 
+	 * Line 3   . . . . X . . 
+	 * Line 4   . . . . . X . 
+	 * Line 5   . . . . . . X 
+	 */
+	
+	public void testGetWinnerDiag() {
+		grid.getLines().get(2).getCells().get(3).setColor(Color.RED);
+		grid.getLines().get(3).getCells().get(4).setColor(Color.RED);
+		grid.getLines().get(4).getCells().get(5).setColor(Color.RED);
+		grid.getLines().get(5).getCells().get(6).setColor(Color.RED);
+		
+		assertEquals(Color.RED, s.getWinner(grid));
+	}
+
+	@Test
+	/**
+	 * Test diagonal
+	 * Columns	0 1 2 3 4 5 6 			
+	 * Line 0   . . . . . . . 
+	 * Line 1   . . . . . . . 
 	 * Line 2   . . . . . . X 
 	 * Line 3   . . . . . X . 
 	 * Line 4   . . . . X . . 

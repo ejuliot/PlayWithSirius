@@ -61,7 +61,7 @@ public class PlayerItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addColorPropertyDescriptor(object);
+			addVictoriesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,23 +89,23 @@ public class PlayerItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Color feature.
+	 * This adds a property descriptor for the Victories feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addColorPropertyDescriptor(Object object) {
+	protected void addVictoriesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Player_color_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Player_color_feature", "_UI_Player_type"),
-				 ConnectfourPackage.Literals.PLAYER__COLOR,
+				 getString("_UI_Player_victories_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Player_victories_feature", "_UI_Player_type"),
+				 ConnectfourPackage.Literals.PLAYER__VICTORIES,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -149,7 +149,6 @@ public class PlayerItemProvider
 
 		switch (notification.getFeatureID(Player.class)) {
 			case ConnectfourPackage.PLAYER__NAME:
-			case ConnectfourPackage.PLAYER__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

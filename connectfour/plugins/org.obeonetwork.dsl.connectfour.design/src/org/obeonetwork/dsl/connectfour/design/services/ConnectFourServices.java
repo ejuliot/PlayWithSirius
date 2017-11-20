@@ -2,6 +2,8 @@ package org.obeonetwork.dsl.connectfour.design.services;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -44,11 +46,30 @@ public class ConnectFourServices {
 			}
 		}
 		game.getGrids().add(grid);
-		
 	}
 	
-	public String now(Grid grid) {
-		return LocalDateTime.now().toString();
+	public void initializeGrid(Grid grid) {
+		grid.setTime(now());
+		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Columns().getUpperBound(); i++) {
+			Column col = ConnectfourFactory.eINSTANCE.createColumn();
+			grid.getColumns().add(col);
+		}
+		for (int i = 0; i < ConnectfourFactory.eINSTANCE.getConnectfourPackage().getGrid_Lines().getUpperBound(); i++) {
+			Line line = ConnectfourFactory.eINSTANCE.createLine();
+			grid.getLines().add(line);
+			
+			for (Column col : grid.getColumns()) {
+				Cell cell = ConnectfourFactory.eINSTANCE.createCell();
+				grid.getCells().add(cell);
+				cell.setLine(line);
+				cell.setColumn(col);
+			}
+		}
+	}
+
+	
+	public String now() {
+		return LocalDateTime.now().format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
 	}
 	
 	public Color getWinner(Grid grid) {
@@ -116,12 +137,11 @@ public class ConnectFourServices {
 		 * Line 5   . . . X . . . 
 		 */
 		// Bottom left. don't need to start too low
-		for (int l = grid.getLines().size()-4 ; l >= 0  && winnersCell == null; l--)
-			winnersCell = getWinnerCellsForDiagonal(grid, 0, l, true);
-	
-		// up right.
-		for (int c = 0 ; c < grid.getColumns().size() - 4  && winnersCell == null; c++)
-			winnersCell = getWinnerCellsForDiagonal(grid, c, 0, true);
+		for (int l = 0; l <= grid.getLines().size()-4 && winnersCell == null; l++) {
+			// up right.
+			for (int c = 0 ; c <= grid.getColumns().size() - 4  && winnersCell == null; c++)
+				winnersCell = getWinnerCellsForDiagonal(grid, c, l, true);
+		}	
 		
 		/*
 		 * check diagonal top right to bottom left such as :

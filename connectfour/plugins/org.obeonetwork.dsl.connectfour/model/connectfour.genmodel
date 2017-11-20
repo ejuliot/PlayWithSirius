@@ -19,8 +19,11 @@
     <genClasses ecoreClass="connectfour.ecore#//Grid">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/columns"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/lines"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/winner"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/cells"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Grid/time"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/winner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/player1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Grid/player2"/>
     </genClasses>
     <genClasses ecoreClass="connectfour.ecore#//Cell">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Cell/column"/>
@@ -35,7 +38,7 @@
     </genClasses>
     <genClasses ecoreClass="connectfour.ecore#//Player">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Player/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute connectfour.ecore#//Player/color"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference connectfour.ecore#//Player/victories"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

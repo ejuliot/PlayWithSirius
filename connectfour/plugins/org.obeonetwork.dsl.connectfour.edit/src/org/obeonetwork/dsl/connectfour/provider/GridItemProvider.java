@@ -20,6 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -62,9 +63,34 @@ public class GridItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTimePropertyDescriptor(object);
 			addWinnerPropertyDescriptor(object);
+			addPlayer1PropertyDescriptor(object);
+			addPlayer2PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Grid_time_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Grid_time_feature", "_UI_Grid_type"),
+				 ConnectfourPackage.Literals.GRID__TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -81,6 +107,50 @@ public class GridItemProvider
 				 getString("_UI_Grid_winner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Grid_winner_feature", "_UI_Grid_type"),
 				 ConnectfourPackage.Literals.GRID__WINNER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Player1 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlayer1PropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Grid_player1_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Grid_player1_feature", "_UI_Grid_type"),
+				 ConnectfourPackage.Literals.GRID__PLAYER1,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Player2 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlayer2PropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Grid_player2_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Grid_player2_feature", "_UI_Grid_type"),
+				 ConnectfourPackage.Literals.GRID__PLAYER2,
 				 true,
 				 false,
 				 true,
@@ -140,7 +210,10 @@ public class GridItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Grid_type");
+		String label = ((Grid)object).getTime();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Grid_type") :
+			getString("_UI_Grid_type") + " " + label;
 	}
 	
 
@@ -156,6 +229,9 @@ public class GridItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Grid.class)) {
+			case ConnectfourPackage.GRID__TIME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case ConnectfourPackage.GRID__COLUMNS:
 			case ConnectfourPackage.GRID__LINES:
 			case ConnectfourPackage.GRID__CELLS:

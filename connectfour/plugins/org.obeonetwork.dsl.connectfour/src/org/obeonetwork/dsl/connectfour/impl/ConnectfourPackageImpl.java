@@ -197,7 +197,25 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 	 * @generated
 	 */
 	public EReference getGrid_Winner() {
-		return (EReference)gridEClass.getEStructuralFeatures().get(2);
+		return (EReference)gridEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGrid_Player1() {
+		return (EReference)gridEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGrid_Player2() {
+		return (EReference)gridEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -206,7 +224,16 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 	 * @generated
 	 */
 	public EReference getGrid_Cells() {
-		return (EReference)gridEClass.getEStructuralFeatures().get(3);
+		return (EReference)gridEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGrid_Time() {
+		return (EAttribute)gridEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -304,8 +331,8 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPlayer_Color() {
-		return (EAttribute)playerEClass.getEStructuralFeatures().get(1);
+	public EReference getPlayer_Victories() {
+		return (EReference)playerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -352,8 +379,11 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 		gridEClass = createEClass(GRID);
 		createEReference(gridEClass, GRID__COLUMNS);
 		createEReference(gridEClass, GRID__LINES);
-		createEReference(gridEClass, GRID__WINNER);
 		createEReference(gridEClass, GRID__CELLS);
+		createEAttribute(gridEClass, GRID__TIME);
+		createEReference(gridEClass, GRID__WINNER);
+		createEReference(gridEClass, GRID__PLAYER1);
+		createEReference(gridEClass, GRID__PLAYER2);
 
 		cellEClass = createEClass(CELL);
 		createEReference(cellEClass, CELL__COLUMN);
@@ -368,7 +398,7 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 
 		playerEClass = createEClass(PLAYER);
 		createEAttribute(playerEClass, PLAYER__NAME);
-		createEAttribute(playerEClass, PLAYER__COLOR);
+		createEReference(playerEClass, PLAYER__VICTORIES);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -406,13 +436,16 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 		// Initialize classes, features, and operations; add parameters
 		initEClass(connectFourEClass, ConnectFour.class, "ConnectFour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnectFour_Grids(), this.getGrid(), null, "grids", null, 0, -1, ConnectFour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnectFour_Players(), this.getPlayer(), null, "players", null, 0, 2, ConnectFour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectFour_Players(), this.getPlayer(), null, "players", null, 0, -1, ConnectFour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gridEClass, Grid.class, "Grid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGrid_Columns(), this.getColumn(), null, "columns", null, 0, 7, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGrid_Lines(), this.getLine(), null, "lines", null, 0, 6, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGrid_Winner(), this.getPlayer(), null, "winner", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGrid_Cells(), this.getCell(), null, "cells", null, 0, -1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGrid_Time(), ecorePackage.getEString(), "time", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGrid_Winner(), this.getPlayer(), this.getPlayer_Victories(), "winner", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGrid_Player1(), this.getPlayer(), null, "player1", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGrid_Player2(), this.getPlayer(), null, "player2", null, 0, 1, Grid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCell_Column(), this.getColumn(), this.getColumn_Cells(), "column", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -427,7 +460,7 @@ public class ConnectfourPackageImpl extends EPackageImpl implements ConnectfourP
 
 		initEClass(playerEClass, Player.class, "Player", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlayer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlayer_Color(), this.getColor(), "color", null, 0, 1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlayer_Victories(), this.getGrid(), this.getGrid_Winner(), "victories", null, 0, -1, Player.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");

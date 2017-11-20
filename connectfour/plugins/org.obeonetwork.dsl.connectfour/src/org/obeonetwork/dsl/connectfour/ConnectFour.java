@@ -51,7 +51,7 @@ public interface ConnectFour extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Players</em>' containment reference list.
 	 * @see org.obeonetwork.dsl.connectfour.ConnectfourPackage#getConnectFour_Players()
-	 * @model containment="true" upper="2"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Player> getPlayers();
